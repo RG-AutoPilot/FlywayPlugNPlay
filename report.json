@@ -1,0 +1,95 @@
+{
+  "individualResults" : [ {
+    "timestamp" : "2025-07-08T12:23:49.4913667",
+    "operation" : "changes",
+    "exception" : null,
+    "licenseFailed" : false,
+    "onlyInSource" : [ ],
+    "onlyInTarget" : [ ],
+    "differences" : [ ],
+    "database" : "AutopilotTest"
+  }, {
+    "timestamp" : "2025-07-08T12:23:49.4913667",
+    "operation" : "drift",
+    "exception" : null,
+    "licenseFailed" : false,
+    "onlyInSource" : [ ],
+    "onlyInTarget" : [ {
+      "objectType" : "Table",
+      "name" : "BeccaTest",
+      "schema" : "dbo",
+      "definitionBefore" : null,
+      "definitionAfter" : "CREATE TABLE [dbo].[BeccaTest]\r\n(\r\n[Test] [int] NULL\r\n)\r\nGO\r\n"
+    }, {
+      "objectType" : "Table",
+      "name" : "PlugNPlay",
+      "schema" : "dbo",
+      "definitionBefore" : null,
+      "definitionAfter" : "CREATE TABLE [dbo].[PlugNPlay]\r\n(\r\n[FirstTest] [int] NULL,\r\n[test] [nchar] (10) NULL\r\n)\r\nGO\r\n"
+    }, {
+      "objectType" : "Table",
+      "name" : "demoplug",
+      "schema" : "dbo",
+      "definitionBefore" : null,
+      "definitionAfter" : "CREATE TABLE [dbo].[demoplug]\r\n(\r\n[TEST] [int] NULL\r\n)\r\nGO\r\n"
+    }, {
+      "objectType" : "Table",
+      "name" : "huxtest",
+      "schema" : "dbo",
+      "definitionBefore" : null,
+      "definitionAfter" : "CREATE TABLE [dbo].[huxtest]\r\n(\r\n[Test] [int] NULL,\r\n[ID] [nchar] (10) NULL\r\n)\r\nGO\r\n"
+    }, {
+      "objectType" : "Table",
+      "name" : "plugindemo",
+      "schema" : "dbo",
+      "definitionBefore" : null,
+      "definitionAfter" : "CREATE TABLE [dbo].[plugindemo]\r\n(\r\n[Test] [int] NULL\r\n)\r\nGO\r\n"
+    }, {
+      "objectType" : "Table",
+      "name" : "tom",
+      "schema" : "dbo",
+      "definitionBefore" : null,
+      "definitionAfter" : "CREATE TABLE [dbo].[tom]\r\n(\r\n[TEST] [int] NULL\r\n)\r\nGO\r\n"
+    } ],
+    "differences" : [ ],
+    "database" : "AutopilotTest",
+    "driftDetected" : true
+  }, {
+    "timestamp" : "2025-07-14T19:03:15.9320931",
+    "operation" : "changes",
+    "exception" : null,
+    "licenseFailed" : false,
+    "onlyInSource" : [ ],
+    "onlyInTarget" : [ {
+      "objectType" : "Table",
+      "name" : "Friends",
+      "schema" : "Logistics",
+      "definitionBefore" : null,
+      "definitionAfter" : "CREATE TABLE [Logistics].[Friends]\r\n(\r\n[RegionID] [int] NOT NULL,\r\n[RegionDescription] [nchar] (50) NOT NULL,\r\n[RegionName] [nvarchar] (20) NULL\r\n)\r\nGO\r\nALTER TABLE [Logistics].[Friends] ADD CONSTRAINT [PK_Friends] PRIMARY KEY NONCLUSTERED ([RegionID])\r\nGO\r\n"
+    } ],
+    "differences" : [ {
+      "objectType" : "Table",
+      "name" : "FlightRoute",
+      "schema" : "Logistics",
+      "definitionBefore" : "CREATE TABLE [Logistics].[FlightRoute]\r\n(\r\n[RouteID] [int] NOT NULL IDENTITY(1, 1),\r\n[DepartureCity] [nvarchar] (50) NOT NULL,\r\n[ArrivalCity] [nvarchar] (50) NOT NULL,\r\n[Distance] [int] NOT NULL\r\n)\r\nGO\r\nALTER TABLE [Logistics].[FlightRoute] ADD CONSTRAINT [PK__FlightRo__80979AADC83FDFDB] PRIMARY KEY CLUSTERED ([RouteID])\r\nGO\r\n",
+      "definitionAfter" : "CREATE TABLE [Logistics].[FlightRoute]\r\n(\r\n[RouteID] [int] NOT NULL IDENTITY(1, 1),\r\n[DepartureCity] [nvarchar] (50) NOT NULL,\r\n[ArrivalCity] [nvarchar] (50) NOT NULL,\r\n[Distance] [int] NOT NULL,\r\n[Testing] [int] NOT NULL\r\n)\r\nGO\r\nALTER TABLE [Logistics].[FlightRoute] ADD CONSTRAINT [PK__FlightRo__80979AADC83FDFDB] PRIMARY KEY CLUSTERED ([RouteID])\r\nGO\r\n"
+    } ],
+    "database" : "AutopilotTest"
+  }, {
+    "timestamp" : "2025-07-14T19:03:15.9320931",
+    "operation" : "drift",
+    "exception" : null,
+    "licenseFailed" : false,
+    "onlyInSource" : [ ],
+    "onlyInTarget" : [ ],
+    "differences" : [ ],
+    "database" : "AutopilotTest",
+    "driftDetected" : false
+  }, {
+    "timestamp" : "2025-07-14T19:03:15.9320931",
+    "operation" : "dryrun",
+    "exception" : null,
+    "licenseFailed" : false,
+    "sql" : "-- -====================================\n-- Flyway Dry Run (2025-07-14 19:04:07)\n-- -====================================\n\nUSE [AutopilotTest]\nGO\nSET ANSI_NULLS ON\nGO\nUSE [AutopilotTest]\nGO\nSET ANSI_NULLS ON\nGO\nUSE [AutopilotTest]\nGO\nSET ANSI_NULLS ON\nGO\n\n-- Executing: validate (with callbacks)\n-- ---------------------------------------------------------------------------------------\nUSE [AutopilotTest]\nGO\nSET ANSI_NULLS ON\nGO\n\n-- Executing: migrate (with callbacks)\n-- ---------------------------------------------------------------------------------------\nUSE [AutopilotTest]\nGO\nSET ANSI_NULLS ON\nGO\nUSE [AutopilotTest]\nGO\nSET ANSI_NULLS ON\nGO\n\n-- Executing: migrate -> v003 (with callbacks)\n-- ---------------------------------------------------------------------------------------\n\n-- Source: migrations\\V003__AutoScriptInsertDate.sql\n-- --------------------------------------------------\nSET NUMERIC_ROUNDABORT OFF\nGO\nSET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS ON\nGO\nPRINT N'Dropping constraints from [Logistics].[FlightRoute]'\nGO\nALTER TABLE [Logistics].[FlightRoute] DROP CONSTRAINT [PK__FlightRo__80979AADC83FDFDB]\nGO\nPRINT N'Creating [Logistics].[Friends]'\nGO\nCREATE TABLE [Logistics].[Friends]\r\n(\r\n[RegionID] [int] NOT NULL,\r\n[RegionDescription] [nchar] (50) NOT NULL,\r\n[RegionName] [nvarchar] (20) NULL\r\n)\nGO\nPRINT N'Creating primary key [PK_Friends] on [Logistics].[Friends]'\nGO\nALTER TABLE [Logistics].[Friends] ADD CONSTRAINT [PK_Friends] PRIMARY KEY NONCLUSTERED ([RegionID])\nGO\nPRINT N'Rebuilding [Logistics].[FlightRoute]'\nGO\nCREATE TABLE [Logistics].[RG_Recovery_1_FlightRoute]\r\n(\r\n[RouteID] [int] NOT NULL IDENTITY(1, 1),\r\n[DepartureCity] [nvarchar] (50) NOT NULL,\r\n[ArrivalCity] [nvarchar] (50) NOT NULL,\r\n[Distance] [int] NOT NULL,\r\n[Testing] [int] NOT NULL\r\n)\nGO\nSET IDENTITY_INSERT [Logistics].[RG_Recovery_1_FlightRoute] ON\nGO\nINSERT INTO [Logistics].[RG_Recovery_1_FlightRoute]([RouteID], [DepartureCity], [ArrivalCity], [Distance]) SELECT [RouteID], [DepartureCity], [ArrivalCity], [Distance] FROM [Logistics].[FlightRoute]\nGO\nSET IDENTITY_INSERT [Logistics].[RG_Recovery_1_FlightRoute] OFF\nGO\nDECLARE @idVal BIGINT\r\nSELECT @idVal = IDENT_CURRENT(N'[Logistics].[FlightRoute]')\r\nIF @idVal IS NOT NULL\r\n    DBCC CHECKIDENT(N'[Logistics].[RG_Recovery_1_FlightRoute]', RESEED, @idVal)\nGO\nDROP TABLE [Logistics].[FlightRoute]\nGO\nEXEC sp_rename N'[Logistics].[RG_Recovery_1_FlightRoute]', N'FlightRoute', N'OBJECT'\nGO\nPRINT N'Creating primary key [PK__FlightRo__80979AADC83FDFDB] on [Logistics].[FlightRoute]'\nGO\nALTER TABLE [Logistics].[FlightRoute] ADD CONSTRAINT [PK__FlightRo__80979AADC83FDFDB] PRIMARY KEY CLUSTERED ([RouteID])\nGO\nINSERT INTO [AutopilotTest].[Customers].[flyway_schema_history] ([installed_rank], [version], [description], [type], [script], [checksum], [installed_by], [execution_time], [success]) VALUES (3, '003', 'AutoScriptInsertDate', 'SQL', 'V003__AutoScriptInsertDate.sql', -774258587, 'RED-GATE\\Huxley.Kendell', 17, 1)\nGO\nUSE [AutopilotTest]\nGO\nSET ANSI_NULLS ON\nGO\n"
+  } ]
+}

@@ -1,0 +1,13 @@
+﻿SET NUMERIC_ROUNDABORT OFF
+GO
+SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT, QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+PRINT N'Dropping constraints from [Logistics].[Friends]'
+GO
+ALTER TABLE [Logistics].[Friends] DROP CONSTRAINT [PK_Friends]
+GO
+PRINT N'Dropping [Logistics].[Friends]'
+GO
+DROP TABLE [Logistics].[Friends]
+GO
+
